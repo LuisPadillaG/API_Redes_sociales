@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct GeneralPublicaciones: View {
-    @StateObject var controlador = ControladorPublicaciones() //guardamos la informacion quequeremos guardar
+    //@StateObject var controlador = ControladorPublicaciones() //guardamos la informacion quequeremos guardar
+    @Environment(ControladorAplicacion.self) var controlador
+    
     var body: some View {
         ScrollView{
             VStack{
@@ -22,10 +24,11 @@ struct GeneralPublicaciones: View {
             }
         }
         .onAppear{
-            if controlador.publicaciones.isEmpty{}
+            /*if controlador.publicaciones.isEmpty{}
                     Task{
                 await controlador.obtener_publicaciones()
-            }
+            }*/
+            print("No eres necesario onAppear")
         }
     }
         
