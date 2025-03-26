@@ -12,6 +12,7 @@ import SwiftUI
 public class ControladorAplicacion{
     var publicaciones: Array<Publicacion> = []
     
+    var publicacion_seleccionada: Int = -1
     init(){
         Task.detached(priority: .high){
             await self.descargar_publicaciones()
@@ -24,6 +25,9 @@ public class ControladorAplicacion{
         guard let publicaciones_descargadas: [Publicacion] = try? await PlaceHolderAPI().descargar_publicaciones() else{return}
         
         publicaciones = publicaciones_descargadas
+        
+    }
+    func descargar_comentarios() async {
         
     }
 }

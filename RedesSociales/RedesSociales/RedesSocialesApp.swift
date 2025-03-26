@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-
 @MainActor
+@main
 struct RedesSocialesApp: App {
     @State var controlador = ControladorAplicacion()
     
