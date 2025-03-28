@@ -19,6 +19,10 @@ class PlaceHolderAPI : Codable{
         return await descargar(recurso: ubicacion_recurso)
     }
     
+    func descargar_perfil(id: Int) async -> Perfil?{
+        let ubicacion_recurso = "/users\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
     private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{
             guard let url = URL(string: "\(url_de_servicio)/posts") else { throw ErroresDeRed.malaDireccionUrl}
