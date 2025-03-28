@@ -8,14 +8,22 @@
 import SwiftUI
 let publicacion_falsa = Publicacion(userId: 1, id: 1, title: "Lorem", body: "Et dolor sit amet")
 struct PublicacionVista: View {
-    let publicacion_a_mostrar: Publicacion
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        Text("\(publicacion_a_mostrar.title)")
-        Text("\(publicacion_a_mostrar.body)")
+        Text("\(controlador.publicacion_seleccionada?.title)")
+        Text("\(controlador.publicacion_seleccionada?.body)")
         
+        NavigationLink{
+            Text("Hola mundo")
+        } label: {
+            Text("ver perfil")
+        }
         ScrollView{
+            ForEach(controlador.comentario){ comentario in
+                Text("Usuario: \(comentario.name)")
+                Text("\(comentario.body)")
+            }
             VStack{
                 // ForEach
             }
@@ -23,5 +31,8 @@ struct PublicacionVista: View {
     }
 }
 #Preview {
-    PublicacionVista(publicacion_a_mostrar: publicacion_falsa)
+    NavigationStack{
+        PublicacionVista()
+            .environment(ControladorAplicacion())
+    }
 }

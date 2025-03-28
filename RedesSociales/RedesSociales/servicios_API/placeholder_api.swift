@@ -19,7 +19,7 @@ class PlaceHolderAPI : Codable{
         return await descargar(recurso: ubicacion_recurso)
     }
     
-    func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
+    private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{
             guard let url = URL(string: "\(url_de_servicio)/posts") else { throw ErroresDeRed.malaDireccionUrl}
             let (datos, respuesta) = try await URLSession.shared.data(from: url)
