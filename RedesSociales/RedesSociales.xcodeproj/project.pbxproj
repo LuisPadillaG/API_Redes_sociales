@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB102CD02D9AEC6B00E82E53 /* menu_aplicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB102CCF2D9AEC6B00E82E53 /* menu_aplicacion.swift */; };
 		FB3A1B8A2D94536D008A7089 /* controlador_app.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A1B892D94536D008A7089 /* controlador_app.swift */; };
 		FB3A1B8C2D945E88008A7089 /* publicacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A1B8B2D945E88008A7089 /* publicacion.swift */; };
 		FB3A1B8E2D946351008A7089 /* comentario.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3A1B8D2D946351008A7089 /* comentario.swift */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB102CCF2D9AEC6B00E82E53 /* menu_aplicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = menu_aplicacion.swift; sourceTree = "<group>"; };
+		FB102CD22D9AFB6400E82E53 /* BungeeTint-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BungeeTint-Regular.ttf"; path = "../../../../../Downloads/Bungee_Tint/BungeeTint-Regular.ttf"; sourceTree = "<group>"; };
 		FB3A1B892D94536D008A7089 /* controlador_app.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = controlador_app.swift; sourceTree = "<group>"; };
 		FB3A1B8B2D945E88008A7089 /* publicacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicacion.swift; sourceTree = "<group>"; };
 		FB3A1B8D2D946351008A7089 /* comentario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = comentario.swift; sourceTree = "<group>"; };
@@ -52,6 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB102CCE2D9AEC4500E82E53 /* menu_inicial */ = {
+			isa = PBXGroup;
+			children = (
+				FB102CCF2D9AEC6B00E82E53 /* menu_aplicacion.swift */,
+			);
+			path = menu_inicial;
+			sourceTree = "<group>";
+		};
+		FB102CD12D9AFA9F00E82E53 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FB102CD22D9AFB6400E82E53 /* BungeeTint-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		FB3D5C4B2D91B0AE00B42A90 = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +90,7 @@
 		FB3D5C562D91B0AE00B42A90 /* RedesSociales */ = {
 			isa = PBXGroup;
 			children = (
+				FB102CD12D9AFA9F00E82E53 /* fonts */,
 				FB3D5C702D91BDFC00B42A90 /* ui */,
 				FB3D5C672D91B1A000B42A90 /* servicios_API */,
 				FB3D5C662D91B18E00B42A90 /* controladores */,
@@ -122,6 +142,7 @@
 		FB3D5C702D91BDFC00B42A90 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				FB102CCE2D9AEC4500E82E53 /* menu_inicial */,
 				FB7440D32D97043E007E900C /* perfil_basico */,
 				FB3D5C712D91BE0800B42A90 /* publicaciones */,
 			);
@@ -215,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB102CD02D9AEC6B00E82E53 /* menu_aplicacion.swift in Sources */,
 				FB3D5C732D91BE1A00B42A90 /* publicaciones_general.swift in Sources */,
 				FB3D5C6B2D91B4A000B42A90 /* placeholder_api.swift in Sources */,
 				FB7440D52D970453007E900C /* perfil_vista_basica.swift in Sources */,

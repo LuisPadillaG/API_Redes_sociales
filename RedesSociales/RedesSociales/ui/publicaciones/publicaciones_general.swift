@@ -21,6 +21,7 @@ struct GeneralPublicaciones: View {
                                 Text("\(publicacion.id)")
                                 VStack{
                                     Text("\(publicacion.title)")
+                                        .font(.custom("BungeeTint-Regular", size: 18))
                                     Text("\(publicacion.body)")
                                 }
                             }
