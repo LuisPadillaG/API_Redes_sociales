@@ -20,9 +20,8 @@ struct MenuNavegacion: View {
                 .tabItem {
                     Label{
                         VStack{
-                            Text("Hola mundo desde aca abajo")
-                                .font(.custom("BungeeTint-Regular", size: 34))
-                            Text("Este es un 2do clic")
+                            Text("Dragon Ball DB")
+                                //.//font(.custom("BungeeTint-Regular", size: 34))
                         }
                     } icon: {
                         Circle()

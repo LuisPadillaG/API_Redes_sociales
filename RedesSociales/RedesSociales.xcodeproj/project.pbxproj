@@ -22,6 +22,11 @@
 		FB3D5C732D91BE1A00B42A90 /* publicaciones_general.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D5C722D91BE1A00B42A90 /* publicaciones_general.swift */; };
 		FB7440D22D9700F9007E900C /* perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7440D12D9700F9007E900C /* perfil.swift */; };
 		FB7440D52D970453007E900C /* perfil_vista_basica.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7440D42D970453007E900C /* perfil_vista_basica.swift */; };
+		FB75AE292D9D942300B8524F /* mono_chino.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE282D9D942300B8524F /* mono_chino.swift */; };
+		FB75AE2B2D9D966800B8524F /* planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE2A2D9D966800B8524F /* planeta.swift */; };
+		FB75AE2D2D9D975600B8524F /* transformacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE2C2D9D975600B8524F /* transformacion.swift */; };
+		FB75AE2F2D9D98BA00B8524F /* dragonball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE2E2D9D98BA00B8524F /* dragonball_api.swift */; };
+		FB75AE322D9D9A7D00B8524F /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE312D9D9A7D00B8524F /* pagina_resultados.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +47,11 @@
 		FB3D5C722D91BE1A00B42A90 /* publicaciones_general.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = publicaciones_general.swift; sourceTree = "<group>"; };
 		FB7440D12D9700F9007E900C /* perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil.swift; sourceTree = "<group>"; };
 		FB7440D42D970453007E900C /* perfil_vista_basica.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = perfil_vista_basica.swift; sourceTree = "<group>"; };
+		FB75AE282D9D942300B8524F /* mono_chino.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mono_chino.swift; sourceTree = "<group>"; };
+		FB75AE2A2D9D966800B8524F /* planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = planeta.swift; sourceTree = "<group>"; };
+		FB75AE2C2D9D975600B8524F /* transformacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transformacion.swift; sourceTree = "<group>"; };
+		FB75AE2E2D9D98BA00B8524F /* dragonball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonball_api.swift; sourceTree = "<group>"; };
+		FB75AE312D9D9A7D00B8524F /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,7 @@
 		FB3D5C652D91B18500B42A90 /* modelos */ = {
 			isa = PBXGroup;
 			children = (
+				FB75AE272D9D940600B8524F /* dragon ball */,
 				FB3D5C682D91B26F00B42A90 /* Publicacion.swift */,
 				FB3A1B8D2D946351008A7089 /* comentario.swift */,
 				FB7440D12D9700F9007E900C /* perfil.swift */,
@@ -135,6 +146,7 @@
 			children = (
 				FB3D5C6A2D91B4A000B42A90 /* placeholder_api.swift */,
 				FB3D5C6C2D91B4AD00B42A90 /* errores.swift */,
+				FB75AE2E2D9D98BA00B8524F /* dragonball_api.swift */,
 			);
 			path = servicios_API;
 			sourceTree = "<group>";
@@ -164,6 +176,25 @@
 				FB7440D42D970453007E900C /* perfil_vista_basica.swift */,
 			);
 			path = perfil_basico;
+			sourceTree = "<group>";
+		};
+		FB75AE272D9D940600B8524F /* dragon ball */ = {
+			isa = PBXGroup;
+			children = (
+				FB75AE302D9D9A6800B8524F /* soporte */,
+				FB75AE282D9D942300B8524F /* mono_chino.swift */,
+				FB75AE2A2D9D966800B8524F /* planeta.swift */,
+				FB75AE2C2D9D975600B8524F /* transformacion.swift */,
+			);
+			path = "dragon ball";
+			sourceTree = "<group>";
+		};
+		FB75AE302D9D9A6800B8524F /* soporte */ = {
+			isa = PBXGroup;
+			children = (
+				FB75AE312D9D9A7D00B8524F /* pagina_resultados.swift */,
+			);
+			path = soporte;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,12 +272,17 @@
 				FB3D5C6B2D91B4A000B42A90 /* placeholder_api.swift in Sources */,
 				FB7440D52D970453007E900C /* perfil_vista_basica.swift in Sources */,
 				FB3D5C692D91B26F00B42A90 /* Publicacion.swift in Sources */,
+				FB75AE2D2D9D975600B8524F /* transformacion.swift in Sources */,
 				FB7440D22D9700F9007E900C /* perfil.swift in Sources */,
+				FB75AE322D9D9A7D00B8524F /* pagina_resultados.swift in Sources */,
 				FB3D5C5A2D91B0AE00B42A90 /* ContentView.swift in Sources */,
+				FB75AE2F2D9D98BA00B8524F /* dragonball_api.swift in Sources */,
 				FB3A1B8E2D946351008A7089 /* comentario.swift in Sources */,
+				FB75AE292D9D942300B8524F /* mono_chino.swift in Sources */,
 				FB3A1B8C2D945E88008A7089 /* publicacion.swift in Sources */,
 				FB3D5C6F2D91BC4600B42A90 /* controlador_publicaciones.swift in Sources */,
 				FB3D5C582D91B0AE00B42A90 /* RedesSocialesApp.swift in Sources */,
+				FB75AE2B2D9D966800B8524F /* planeta.swift in Sources */,
 				FB3D5C6D2D91B4AD00B42A90 /* errores.swift in Sources */,
 				FB3A1B8A2D94536D008A7089 /* controlador_app.swift in Sources */,
 			);
