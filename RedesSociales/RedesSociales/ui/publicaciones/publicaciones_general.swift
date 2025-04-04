@@ -18,12 +18,22 @@ struct GeneralPublicaciones: View {
                             PublicacionVista()
                         }label:{
                             HStack{
+                                Spacer()
                                 Text("\(publicacion.id)")
-                                VStack{
+                                    .foregroundColor(.white)
+                                    .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                Spacer()
+                                Spacer()
+                                HStack{
                                     Text("\(publicacion.title)")
-                                        .font(.custom("BungeeTint-Regular", size: 18))
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.system(size: 20))
+                                        .foregroundColor(.white.opacity(0.5))
+                                    Spacer()
                                     Text("\(publicacion.body)")
+                                        .foregroundColor(.white.opacity(0.85))
                                 }
+                                Spacer()
                             }
                             
                         }.simultaneousGesture(TapGesture().onEnded({
@@ -37,7 +47,7 @@ struct GeneralPublicaciones: View {
                         }*/
                     }
                 }
-            }
+            }.background(.black.opacity(0.9))
         }
         .onAppear{
             print("Hi world")

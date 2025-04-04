@@ -12,15 +12,15 @@ struct MenuNavegacion: View {
     var body: some View {
         TabView{
             GeneralPublicaciones()
-                .tabItem { Label("Es esta una pantalla", systemImage: "Circle") }
+                .tabItem { Label("Cuentas y tal", systemImage: "Circle") }
                 .badge(controlador.publicaciones.count)
-            Text("Hola mundo")
-                .tabItem { Label("Es esta una pantalla", systemImage: "Circle") }
+            PantallaPersonaje()
+                .tabItem { Label("Dragon Ball DB", systemImage: "Circle") }
             Text("Hola desde pantalla 3")
                 .tabItem {
                     Label{
                         VStack{
-                            Text("Dragon Ball DB")
+                            Text("Pantallita 3")
                                 //.//font(.custom("BungeeTint-Regular", size: 34))
                         }
                     } icon: {
