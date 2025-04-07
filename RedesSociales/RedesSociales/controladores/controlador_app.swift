@@ -14,6 +14,7 @@ public class ControladorAplicacion{
     var comentario: Array<Comentario> = []
     
     var publicacion_seleccionada: Publicacion? = nil
+    var mono_chino_seleccionado: MonoChino? = nil
     var perfil_a_mostrar: Perfil? = nil
     
     var pagina_resultados: PaginaResultado? = nil
@@ -55,6 +56,17 @@ public class ControladorAplicacion{
             await self.descargar_comentarios()
         })
     }
+    
+    
+    func seleccionar_personaje(_ mono_chino: MonoChino) -> Void {
+        mono_chino_seleccionado = mono_chino
+        
+        Task.detached(operation: {
+            await self.descargar_monos_chinos()
+        })
+    }
+    
+    
     func descargar_perfil(id: Int) async -> Void {
         
         guard let perfil: Perfil = try? await PlaceHolderAPI().descargar_perfil(id: id) else {return}

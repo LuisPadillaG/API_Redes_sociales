@@ -35,7 +35,6 @@ struct GeneralPublicaciones: View {
                                 }
                                 Spacer()
                             }
-                            
                         }.simultaneousGesture(TapGesture().onEnded({
                             controlador.seleccionar_publicacion(publicacion)
                         }))

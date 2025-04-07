@@ -15,18 +15,28 @@ struct PantallaPersonaje: View {
     
     var body: some View {
         if(controlador.pagina_resultados != nil){
-            ScrollView{
-                LazyVStack{
-                    ForEach(controlador.pagina_resultados!.items){ personaje in
-                        Text("El personaje es \(personaje.name)")
-                        AsyncImage(url: URL(string: personaje.image))
+            NavigationStack{
+                ScrollView{
+                    LazyVStack{
+                        ForEach(controlador.pagina_resultados!.items){ personaje in
+                            NavigationLink{
+                                PantallaIndividual()
+                            }label: {
+                                Text("El personaje es \(personaje.name)")
+                                AsyncImage(url: URL(string: personaje.image))
+                            }
+                            
+                        }
                     }
                 }
             }
         }
+        
     }
 }
-
+/*
+ 
+ */
 #Preview {
     PantallaPersonaje()
         .environment(ControladorAplicacion())
