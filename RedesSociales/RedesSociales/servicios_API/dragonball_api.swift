@@ -8,13 +8,20 @@
 import SwiftUI
 
 class DragonBallAPI: Codable{
-    let url_base = "https://dragonball-api.com/api"
+    var url_base = "https://dragonball-api.com/api"
     
     func descargar_pagina_personajes() async -> PaginaResultado?{
         let ubicacion_recursos = "/characters"
         
         return await descargar(recurso: ubicacion_recursos)
     }
+    
+    func descargar_informacion_personaje(id: Int) async -> MonoChino?{
+        let ubicacion_recurso = "/characters/\(id)"
+        return await descargar(recurso: ubicacion_recurso)
+    }
+    
+    
     private func descargar<TipoGenerico: Codable>(recurso: String) async -> TipoGenerico?{
         do{
             guard let url = URL(string: "\(url_base)\(recurso)") else { throw ErroresDeRed.malaDireccionUrl}
