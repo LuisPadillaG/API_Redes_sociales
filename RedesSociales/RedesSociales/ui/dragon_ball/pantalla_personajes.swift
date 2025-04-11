@@ -22,15 +22,39 @@ struct PantallaPersonaje: View {
                             NavigationLink{
                                 
                                 //Text("Hola mundo\(controlador.personaje?.transformations?.name)")
-                                AsyncImage(url: URL(string: controlador.personaje?.image?))
-                                Text("Hola mundo: \(controlador.personaje?.originPlanet?.name)")
-                                Text("Hola mundo: \(controlador.personaje?.name)")
-                                Text("Hola mundo: \(controlador.personaje?.ki)")
-                                Text("Hola mundo: \(controlador.personaje?.ki)")
-                                Text("Ki maximo: \(controlador.personaje?.maxKi)")
-                                Text("Raza: \(controlador.personaje?.race)")
-                                Text("Genero: \(controlador.personaje?.gender)")
-                                Text("Descripcion: \(controlador.personaje?.description)")
+                                ScrollView{
+                                    AsyncImage(url: URL(string: controlador.personaje?.image ?? "")){ phase in
+                                        if let image = phase.image {
+                                            image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 200)
+                                        }else if phase.error != nil {
+                                            Color.red
+                                        }
+                                    }
+                                    Text(" Planeta: \(controlador.personaje?.originPlanet?.name)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.system(size: 14))
+                                    Text(" Hola, soy \(controlador.personaje?.name)")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.system(size: 20))
+                                    Text("Poder:")
+                                        .frame(maxWidth: .infinity, alignment: .leading)
+                                        .font(.system(size: 16))
+                                    HStack{
+                                        Text("Ki base: \(controlador.personaje?.ki)")
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .font(.system(size: 14))
+                                        Text("Ki maximo: \(controlador.personaje?.maxKi)")
+                                            .frame(maxWidth: .infinity, alignment: .leading)
+                                            .font(.system(size: 14))
+                                    }
+                                    
+                                    Text("Raza: \(controlador.personaje?.race)")
+                                    Text("Genero: \(controlador.personaje?.gender)")
+                                    Text("Descripcion: \(controlador.personaje?.description)")
+                                }
                                 /*
                                  let maxKi: String
                                  let race: String
