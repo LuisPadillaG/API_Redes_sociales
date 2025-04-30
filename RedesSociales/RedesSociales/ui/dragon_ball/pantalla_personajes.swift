@@ -23,22 +23,34 @@ struct PantallaPersonaje: View {
                                 
                                 //Text("Hola mundo\(controlador.personaje?.transformations?.name)")
                                 ScrollView{
-                                    AsyncImage(url: URL(string: controlador.personaje?.image ?? "")){ phase in
-                                        if let image = phase.image {
-                                            image
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 200)
-                                        }else if phase.error != nil {
-                                            Color.red
+                                    AsyncImage(url: URL(string: controlador.personaje?.image ?? "")) { phase in
+                                            if let image = phase.image {
+                                                image
+                                                    .resizable()
+                                                    .scaledToFit()
+                                                    .frame(width: 100)
+                                            } else if phase.error != nil {
+                                                Color.red
+                                            }
                                         }
-                                    }
-                                    Text(" Planeta: \(controlador.personaje?.originPlanet?.name)")
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .font(.system(size: 14))
-                                    Text(" Hola, soy \(controlador.personaje?.name)")
-                                        .frame(maxWidth: .infinity, alignment: .leading)
-                                        .font(.system(size: 20))
+                                        if let planeta = controlador.personaje?.originPlanet?.name {
+                                            Text(" Planeta: \(planeta)")
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .font(.system(size: 14))
+                                        } else {
+                                            Text(" Planeta: Desconocido")
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .font(.system(size: 14))
+                                        }
+                                        if let nombre = controlador.personaje?.name {
+                                            Text(" Hola, soy \(nombre)")
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .font(.system(size: 20))
+                                        } else {
+                                            Text(" Hola, soy Sin nombre")
+                                                .frame(maxWidth: .infinity, alignment: .leading)
+                                                .font(.system(size: 20))
+                                        }
                                     Text("Poder:")
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                         .font(.system(size: 16))
