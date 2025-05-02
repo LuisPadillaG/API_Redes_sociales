@@ -1,8 +1,8 @@
 //
-//  pantalla_personajes.swift
+//  planeta.swift
 //  RedesSociales
 //
-//  Created by alumno on 4/4/25.
+//  Created by alumno on 5/2/25.
 //
 
 import SwiftUI
@@ -10,11 +10,11 @@ import SwiftUI
 /*
  https://www.hackingwithswift.com/quick-start/swiftui/how-to-load-a-remote-image-from-a-url
  */
-struct PantallaPersonaje: View {
+struct PantallaPlaneta: View {
     @Environment(ControladorAplicacion.self) var controlador
     
     var body: some View {
-        if(controlador.pagina_resultados != nil){
+        if(controlador.pagina_resultados_planeta != nil){
             NavigationStack{
                 ScrollView{
                     LazyVStack{
@@ -156,7 +156,7 @@ struct PantallaPersonaje: View {
                                                         .frame(height: 200)
                                                 } else if phase.error != nil {
                                                     Color.red
-                                                        .frame(height: 200)  
+                                                        .frame(height: 200)
                                                 } else {
                                                     ProgressView()
                                                         .frame(height: 200)
@@ -171,13 +171,15 @@ struct PantallaPersonaje: View {
                             }))
                             .padding(.bottom, 8)
                                         Rectangle() //rectángulo delgado pal el borde
-                                            .frame(height: 1) 
+                                            .frame(height: 1)
                                             .foregroundColor(Color.green.opacity(0.5))
                         }
                     }
                 }.background(.black.opacity(0.9))
             }
-        }
+        }else{
+            Text("No encontro nada jaja, lol")
+        }   
         
     }
 }
@@ -185,6 +187,6 @@ struct PantallaPersonaje: View {
  
  */
 #Preview {
-    PantallaPersonaje()
+    PantallaPlaneta()
         .environment(ControladorAplicacion())
 }

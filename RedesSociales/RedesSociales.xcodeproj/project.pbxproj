@@ -28,6 +28,7 @@
 		FB75AE2F2D9D98BA00B8524F /* dragonball_api.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE2E2D9D98BA00B8524F /* dragonball_api.swift */; };
 		FB75AE322D9D9A7D00B8524F /* pagina_resultados.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB75AE312D9D9A7D00B8524F /* pagina_resultados.swift */; };
 		FB9D627C2DA42EE40084A2A4 /* pantalla_personaje_individual.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9D627B2DA42EE40084A2A4 /* pantalla_personaje_individual.swift */; };
+		FBD44A8C2DC5292C0071EFFF /* pantalla_planeta.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD44A8B2DC5292C0071EFFF /* pantalla_planeta.swift */; };
 		FBD566BA2DA0340300CAFEFD /* pantalla_personajes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD566B92DA0340300CAFEFD /* pantalla_personajes.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		FB75AE2E2D9D98BA00B8524F /* dragonball_api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dragonball_api.swift; sourceTree = "<group>"; };
 		FB75AE312D9D9A7D00B8524F /* pagina_resultados.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pagina_resultados.swift; sourceTree = "<group>"; };
 		FB9D627B2DA42EE40084A2A4 /* pantalla_personaje_individual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_personaje_individual.swift; sourceTree = "<group>"; };
+		FBD44A8B2DC5292C0071EFFF /* pantalla_planeta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_planeta.swift; sourceTree = "<group>"; };
 		FBD566B92DA0340300CAFEFD /* pantalla_personajes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pantalla_personajes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -197,6 +199,7 @@
 			children = (
 				FBD566B92DA0340300CAFEFD /* pantalla_personajes.swift */,
 				FB9D627B2DA42EE40084A2A4 /* pantalla_personaje_individual.swift */,
+				FBD44A8B2DC5292C0071EFFF /* pantalla_planeta.swift */,
 			);
 			path = dragon_ball;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				FB3D5C5A2D91B0AE00B42A90 /* ContentView.swift in Sources */,
 				FB75AE2F2D9D98BA00B8524F /* dragonball_api.swift in Sources */,
 				FB3A1B8E2D946351008A7089 /* comentario.swift in Sources */,
+				FBD44A8C2DC5292C0071EFFF /* pantalla_planeta.swift in Sources */,
 				FB75AE292D9D942300B8524F /* mono_chino.swift in Sources */,
 				FB9D627C2DA42EE40084A2A4 /* pantalla_personaje_individual.swift in Sources */,
 				FB3A1B8C2D945E88008A7089 /* publicacion.swift in Sources */,

@@ -13,3 +13,9 @@ struct Planeta: Identifiable, Codable
     let description: String
     let image:String
 }
+struct PaginaResultadoPlaneta: Codable{ //, Identifiable
+    //var id: Int = self.meta.currentPage
+    let items: [Planeta]
+    let meta: Meta
+    let links: Enlaces
+}
